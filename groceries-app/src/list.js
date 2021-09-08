@@ -2,7 +2,7 @@ import React from "react";
 
 
 //this is the family member 1 grocery list component
-class List extends React.Component {
+export default class List extends React.Component {
     render() {
       return (
         <div className = "list">
@@ -16,7 +16,7 @@ class List extends React.Component {
       );
     }
   } //end ListOne component
-export default List;   
+  
 
 
 

@@ -15,65 +15,27 @@
  *    some will work and save lifecycles/lazy loading for later).
  *
  *****************************************************************************************************************/
-import List from "./list";
+
 import React from "react";
+import List from "./list";
+import AddRemoveItem from "./AddRemoveItem";
 import "./App.css";
 
+function App() {
+  state = {
+    fname:'',  
+    item: '',
+    quantity: '',
+    added: false
+}
 
-
-//this is a checkbox to select Organic vs. Conventional
-//Notes: if isChecked only provide Organic groceries
-// class CheckBox extends React.Component {
-//   render() {
-//     return (
-//       <div className="checkbox">
-//         <p>CheckOrganic?</p>
-//         {<input type="checkbox" />}
-//       </div>
-//     );
-//   }
- //end CheckBox Component
-
-//this is a button to remove an item from the grocery list
-class AddRemoveItem extends React.Component {
-  render() {
-    return (
-      <div className="button">
-        <form>
-          <br />
-        <label for="Checkbox">Check if Organic Preferred</label>
-        <br />
-        <input type="checkbox" id="checkbox" placeholder="Organic?" />
-        <br />
-        <input type="text" id="ItemInput" placeholder="Enter your grocery item" />
-        <br />
-        <label for="NumInput">Select Item Quantity</label>
-        <br />
-        <input type="number" id="NumInput" placeholder="Select Item Quantity" />
-        <br />
-        <label for="AddItem" onClick = "">Add Item</label>
-        <br />
-        <button id="AddItem">Add Item</button>
-        <br />
-        <label for="RemoveItem">Remove Item</label>
-        <br />
-        <button id="RemoveItem">Remove Item</button>
-        <br />
-        <label for="SortBy">Sort list Ascending:</label>
-        <br />
-        <input type="filter" id="SortBy" placeholder="Sort A-Z" />
-
-        </form>
-      </div>
-      
-    );
-  }
+handleChange = event => {
+  // computed property names
+  this.setState({ [event.target.id]: event.target.value })
 }
 
 
 
-
-function App() {
 
 //   state = {
 //     item: '',
