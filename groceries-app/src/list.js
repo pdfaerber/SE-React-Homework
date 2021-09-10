@@ -1,38 +1,31 @@
-import React from "react";
+/************************************************************************
+ * This grocery cart list component adds/removes items prior to
+ * final purchase.
+ *
+ * **********************************************************************/
 
+import React, {Component} from "react";
+import AddRemoveItem from "./AddRemoveItem";
 
-//this is the family member 1 grocery list component
-export default class List extends React.Component {
-    render() {
-      return (
-        <div className = "list">
-        <h3>{this.fname = "Patrick"}</h3>
-        <li>{this.item = "Tofu"}</li>
-        <li>{this.item = "Swiss Chard"}</li>
-        <li>{this.item = "Peanut Butter"}</li>
-        <li>{this.item = "Seltzer Water"}</li>
-        {/* <li>{this.item = {document.getElementById("ItemInput")}</li> */}
-        </div>
-      );
-    }
-  } //end ListOne component
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default function List(props) {
+  console.log(props);
+  return (
+    <div className="list">
+      {/* <h3>{props.fname + "'s Shopping Cart"}</h3> */}
+      {""}
+      <AddRemoveItem>
+        {props.groceries.map((grocery, idx) => (
+          <li key={idx}>
+            Item:{" " + grocery.item + " "}
+            Quantity:{" " + grocery.quantity + " "}
+            Units:{grocery.units + " "}
+          </li>
+        ))}
+      </AddRemoveItem>
+    </div>
+  );
+}
+//end List Component
 
 // export default function () {
 //     const items = ["First Item", "Second Item", "Third Item"];
