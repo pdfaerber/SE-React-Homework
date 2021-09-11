@@ -1,0 +1,18 @@
+.App {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* grid-gap: 10px; */
+  gap: 10px;
+  text-align: justify;
+  background-color: rgba(119, 218, 243, 0.836);
+  border: 1px solid rgb(30, 17, 143);
+  padding: 10px;
+}
+
+.display{
+  display: grid;
+  background-color: rgba(230, 255, 116, 0.986);
+  list-style: none;
+  border: 1px solid rgb(30, 17, 143);
+  padding: 5px;
+}
