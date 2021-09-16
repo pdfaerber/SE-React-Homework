@@ -5,7 +5,7 @@ import TodoList from "./TodoList";
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   const [edit, setEdit] = useState({
     id: null,
-    value: "",
+    value: '',
   });
 
   const submitUpdate = value => {
@@ -18,7 +18,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   } 
 
   if (edit.id) {
-    return <TodoForm edit={edit} onSubmit = {submitUpdate}/>;
+    return <TodoForm edit={edit} onSubmit = {submitUpdate}/>
   }
 
   return todos.map((todo, index) => (
@@ -36,14 +36,14 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
           onClick={() => removeTodo(todo.id)}
           className="delete-button"
         >
-          Delete todo
+          Delete
         </button>
         <button
           id="editButton"
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
           className="edit-button"
         >
-          Edit
+          Update
         </button>
       </div>
     </div>
