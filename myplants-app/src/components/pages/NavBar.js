@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MdFingerprint } from 'react-icons/md';
+import { RiPlantLine } from 'react-icons/ri'
+// import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import {Button} from '../Button';
+import './NavBar.css'
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -24,9 +26,9 @@ function NavBar() {
     
     <div className='navbar'>
       <div className='.navbar-container container'>
-        <MdFingerprint className='navbar-icon' />
+        <RiPlantLine className='navbar-icon' />
         <Link to='/' className='navbar-logo'>
-          Patrick's House (er... Apartment) of Plants
+          Patrick's House of Plants
         </Link>
         <br />
         <div className='menu-icon' onClick={handleClick}>
