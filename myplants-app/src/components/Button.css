@@ -1,5 +1,5 @@
 :root {
-  --primary: #fff;
+  --primary:#fff;
 }
 
 .btn {
@@ -104,5 +104,7 @@
   align-items: center;
   text-decoration: none;
   padding: 8px 16px;
+  height: 100%;
+  width: 100%;
 
 }

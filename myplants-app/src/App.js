@@ -12,8 +12,9 @@ function App() {
           <Route path='/' />
         </Switch>
       </Router>
-      <h3>Happy Growing</h3>
+      <h3>Happy Growing</h3> 
     </div>
+    
   );
 }
 
