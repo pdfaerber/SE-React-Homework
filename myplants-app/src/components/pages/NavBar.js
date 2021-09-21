@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { RiPlantLine } from "react-icons/ri";
+import { SiCoffeescript } from "react-icons/si";
 // import { MdFingerprint } from 'react-icons/md';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Button } from "../Button";
@@ -29,12 +29,12 @@ function NavBar() {
   window.addEventListener("resize", showButton);
 
   return (
-    <IconContext.Provider value={{ color: 'forestgreen' }}>
+    <IconContext.Provider value={{ color: '#290001' }}>
       <div className="navbar">
         <div className=".navbar-container container">
-          <RiPlantLine className="navbar-icon" />
+          <SiCoffeescript className="navbar-icon" />
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Patrick's House of Plants
+            Patrick's House of Java
           </Link>
           
           <br />
@@ -49,25 +49,25 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                About
+                About Us
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/meetmylants"
+                to="/drinks"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Meet My Plants
+                Coffee Drinks & Recipes
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                to="/caretips"
+                to="/swag"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Care Tips/Advice
+                Coffee Swag - New
               </Link>
             </li>
             <li className="nav-item">
@@ -76,7 +76,7 @@ function NavBar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Donate
+                Hot (Tea)pics
               </Link>
             </li>
             <li className="nav-item">
@@ -85,7 +85,7 @@ function NavBar() {
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
-                Contact
+                Contact Us
               </Link>
             </li>
             <li className="nav-btn">

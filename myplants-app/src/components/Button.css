@@ -1,5 +1,5 @@
 :root {
-  --primary:#fff;
+  --primary:#290001;
 }
 
 .btn {
@@ -13,7 +13,7 @@
 
 .btn--primary {
   background-color: var (--primary);
-  color: #242424;
+  color: #290001;
   border: 1px solid var(--primary);
 }
 
@@ -43,7 +43,7 @@
   background-color: transparent;
   color: #fff;
   padding: 14px 20px;
-  border: 1px solid #fff;
+  border: 1px solid #290001;
   transition: all 0.3s ease-out;
 }
 
@@ -70,8 +70,8 @@
     border: none;
 }
 
-.blue{
-    background-color: #276afb;
+.brown{
+    background-color: #290001;
     color: #fff;
     border: none;
 }
