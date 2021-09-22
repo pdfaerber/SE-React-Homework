@@ -29,14 +29,14 @@ function NavBar() {
   window.addEventListener("resize", showButton);
 
   return (
-    <IconContext.Provider value={{ color: '#290001' }}>
+    <IconContext.Provider value={{ color: "#290001" }}>
       <div className="navbar">
         <div className=".navbar-container container">
           <SiCoffeescript className="navbar-icon" />
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Patrick's House of Java
           </Link>
-          
+
           <br />
           <div className="menu-icon" onClick={handleClick}>
             {click ? <FaTimes /> : <FaBars />}
@@ -54,7 +54,7 @@ function NavBar() {
             </li>
             <li className="nav-item">
               <Link
-                to='/HotDrink'
+                to="/HotDrink"
                 className="nav-links"
                 onClick={closeMobileMenu}
               >
@@ -62,11 +62,7 @@ function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                to="/swag"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
+              <Link to="/swag" className="nav-links" onClick={closeMobileMenu}>
                 Coffee Swag - New
               </Link>
             </li>
@@ -90,13 +86,17 @@ function NavBar() {
             </li>
             <li className="nav-btn">
               {button ? (
-                <Link to="/sign-up" className="btn-link" >
+                <Link to="/sign-up" className="btn-link">
                   <Button buttonStyle="btn--outline" buttonSize="btn-mobile">
                     Sign Up
                   </Button>
                 </Link>
               ) : (
-                <Link to="/sign-up" className="btn-link" onClick={closeMobileMenu}>
+                <Link
+                  to="/sign-up"
+                  className="btn-link"
+                  onClick={closeMobileMenu}
+                >
                   <Button buttonStyle="btn--outline" buttonSize="btn-mobile">
                     Sign Up
                   </Button>

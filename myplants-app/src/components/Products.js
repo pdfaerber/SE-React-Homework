@@ -1,8 +1,13 @@
 import React from "react";
-import { FaFire } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { Button } from "./Button";
+import {GiCoffeeBeans, GiTeapotLeaves, GiCoffeePot} from 'react-icons/gi';
+import { SiGitea } from "react-icons/si";
+import { IconContext } from "react-icons/lib";
+
 function Products() {
   return (
+    // <IconContext.Provider value={{color: '#fff', size: 64}}></IconContext.Provider>
     <div className="product__section">
       <div className="product__wrapper">
         <h1 className="product__heading">Products</h1>
@@ -10,11 +15,46 @@ function Products() {
           <Link to="/sign-up" className="product__container-prod">
             <div className="product__container-prodInfo">
               <div className="icon">
-                  <FaFire/>
+                <GiCoffeeBeans />
               </div>
-              <h3>Starter</h3>
-              <h4></h4>
-
+              <ul className="product__container-features">
+                <h3>Coffees</h3>
+                <li>item: </li>
+                <li>description: </li>
+                <li>price: </li>
+              </ul>
+              <Button buttonSize="button--wide" buttonColor='primary'>Add to cart</Button>
+            </div>
+          </Link>
+          <Link to="/sign-up" className="product__container-prod">
+            <div className="product__container-prodInfo">
+              <div className="icon">
+                <SiGitea />
+              </div>
+              <ul className="product__container-features">
+                <h3>Teas</h3>
+                <li>item: </li>
+                <li>description: </li>
+                <li>price: </li>
+              </ul>
+              <Button buttonSize="button--wide" buttonColor='primary'>Add to cart</Button>
+            </div>
+          </Link>
+          <Link to="/sign-up" className="product__container-prod">
+            <div className="product__container-prodInfo">
+              <div className="icon">
+                <GiCoffeePot />
+              </div>
+              <ul className="product__container-features">
+                <h3>Brewing Accessories</h3>
+                <li>item: </li>
+                <li>description: </li>
+                <li>price: </li>
+              </ul>
+              <div className="icon">
+                <GiTeapotLeaves />
+              </div>
+              <Button buttonSize="button--wide" buttonColor='primary'>Add to cart</Button>
             </div>
           </Link>
         </div>

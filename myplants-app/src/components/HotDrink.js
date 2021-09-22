@@ -1,19 +1,17 @@
-import React from 'react';
+import React from "react";
 import reactDom from "react-dom";
 import { useState, setInfo } from "react";
 
-
 function HotDrink() {
-    const data = "";
+  const data = "";
   const [hotDrink, setInfo] = useState(data);
 
   function getHotDrink() {
     fetch("https://api.sampleapis.com/coffee/hot")
       .then((data) => data.json())
       .then((response) => {
-       
-        console.log("Success", response)
-        });
+        console.log("Success", response);
+      });
   } //end triviaFetch
 
   if (data) {
@@ -23,7 +21,7 @@ function HotDrink() {
   return (
     <div className="App">
       <button id="randomButton" onClick={() => getHotDrink()}>
-       Check out the Hot Drink List
+        Check out the Hot Drink List
       </button>
 
       {/* display answer container */}
@@ -43,8 +41,5 @@ function HotDrink() {
       </div>
     </div>
   );
-  }
+}
 export default HotDrink;
-
-
-

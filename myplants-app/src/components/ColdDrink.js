@@ -1,20 +1,18 @@
-import React from 'react';
+import React from "react";
 import reactDom from "react-dom";
 import { useState, setInfo } from "react";
 
-
 function ColdDrink() {
-    const data = "";
+  const data = "";
   const [coldDrink] = useState(data);
 
   function getColdDrink() {
     fetch("https://api.sampleapis.com/coffee/iced")
       .then((data) => data.json())
       .then((response) => {
-       
-        console.log("Success", response)
-        });
-  } //end 
+        console.log("Success", response);
+      });
+  } //end
 
   if (data) {
     console.log(data);
@@ -23,7 +21,7 @@ function ColdDrink() {
   return (
     <div className="App">
       <button id="button__coldDrink" onClick={() => getColdDrink()}>
-       Check out the Cold Drink List
+        Check out the Cold Drink List
       </button>
 
       {/* display answer container */}
@@ -43,5 +41,5 @@ function ColdDrink() {
       </div>
     </div>
   );
-  }
+}
 export default ColdDrink;

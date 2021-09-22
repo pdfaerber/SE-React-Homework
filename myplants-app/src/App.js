@@ -4,8 +4,6 @@ import "./App.css";
 import NavBar from "./components/pages/NavBar";
 import Home from "./components/pages/HomePage/Home";
 import Footer from "./components/pages/Footer/Footer";
-// import HotDrink from "./components/HotDrink";
-// import ColdDrink from "./components/ColdDrink";
 import DrinkMenu from "./components/DrinkMenu";
 
 function App() {
@@ -13,8 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar />
-        
-        <Switch>
+          <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/DrinkMenu' component={DrinkMenu}/>
          </Switch>
