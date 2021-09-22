@@ -3,14 +3,14 @@ export const homeObjOne = {
     lightText: true,
     LightTextDesc: true,
     topLine: 'Order Here',
-    headLine: 'Unlimited Access to Growing Tips and Care Advice',
-    description: 'Win exclusive access to my plants through my rewards program ',
+    headLine: 'Check out our new products and offers!',
+    description: 'Sign up here for new product info, recipes and special offers:',
     buttonLabel: 'Sign up Today',
     imgStart: '',
     img: 'images/svg-1.svg',
     alt: 'Coffee or Tea Product Photo Here'
 
-}
+};
 
 export const homeObjTwo = {
     lightBg: false,
