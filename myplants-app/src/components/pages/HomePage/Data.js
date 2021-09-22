@@ -2,7 +2,7 @@ export const homeObjOne = {
     lightBg: false,
     lightText: true,
     LightTextDesc: true,
-    topLine: 'Order Here',
+    topLine: 'Order for Pickup Here',
     headLine: 'Check out our new products and offers!',
     description: 'Sign up here for new product info, recipes and special offers:',
     buttonLabel: 'Sign up Today',
