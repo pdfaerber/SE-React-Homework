@@ -35,12 +35,16 @@ function HotDrink() {
       {/* display question container */}
       <div className="display">
         <h3>Description</h3>
-       {hotDrink.length && <div>description: {hotDrink.description}</div>}
+        {hotDrink.map(drink => <div key={drink.description}>
+         {drink.description}
+       </div>)}   
       </div>
       {/* display points container */}
       <div className="display">
         <h3>Ingredients</h3>
-        {hotDrink.length && <div> points: {hotDrink.ingredients}</div>}
+        {hotDrink.map(drink => <div key={drink.ingredients}>
+         {drink.ingredients}
+       </div>)}   
       </div>
     </div>
   );

@@ -3,41 +3,50 @@ import reactDom from "react-dom";
 import { useState, setInfo } from "react";
 
 function ColdDrink() {
-  const data = "";
-  const [coldDrink] = useState(data);
+  
+  const [coldDrink, setInfo] = useState([]);
 
   function getColdDrink() {
     fetch("https://api.sampleapis.com/coffee/iced")
       .then((data) => data.json())
       .then((response) => {
+        setInfo(response)
         console.log("Success", response);
       });
   } //end
 
-  if (data) {
-    console.log(data);
-  }
 
   return (
+    
     <div className="App">
-      <button id="button__coldDrink" onClick={() => getColdDrink()}>
+      <button id="randomButton" onClick={() => getColdDrink()}>
         Check out the Cold Drink List
       </button>
 
-      {/* display answer container */}
-      <div className="display">
+      {/* display Cold Drink list container */}
+      <div className="display__coldDrink-list">
         <h3>Title</h3>
-        {data && <div> answer: {coldDrink.title}</div>}
+        <div>
+         {/* <p>  {ColdDrink[0].title}</p> */}
+       {coldDrink.map(drink => <div key={drink.title}>
+         {drink.title}
+       </div>)}   
+        </div>
+        
       </div>
       {/* display question container */}
       <div className="display">
         <h3>Description</h3>
-        {data && <div> question: {coldDrink.description}</div>}
+        {coldDrink.map(drink => <div key={drink.description}>
+         {drink.description}
+       </div>)}   
       </div>
       {/* display points container */}
       <div className="display">
         <h3>Ingredients</h3>
-        {data && <div> points: {coldDrink.ingredients}</div>}
+        {coldDrink.map(drink => <div key={drink.ingredients}>
+         {drink.ingredients}
+       </div>)}   
       </div>
     </div>
   );
