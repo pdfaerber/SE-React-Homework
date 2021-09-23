@@ -4,7 +4,7 @@ import HeroSection from "../../HeroSection";
 import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from "./Data";
 import Products from "../../Products";
 import DrinkMenu from "../../DrinkMenu";
-
+import ProdApi from "../../ProdApi";
 function Home() {
   return (
     <React.Fragment>
@@ -13,6 +13,7 @@ function Home() {
       <HeroSection {...homeObjThree} />
       <HeroSection {...homeObjTwo} />
       <Products/>
+      <ProdApi/>
       <HeroSection {...homeObjFour} />
     </React.Fragment>
   );
