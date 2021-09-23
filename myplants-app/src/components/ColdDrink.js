@@ -27,26 +27,18 @@ function ColdDrink() {
       <div className="display__coldDrink-list">
         <h3>Title</h3>
         <div>
-         {/* <p>  {ColdDrink[0].title}</p> */}
-       {coldDrink.map(drink => <div key={drink.title}>
-         {drink.title}
-       </div>)}   
+        {coldDrink.map((drink) => (
+            <div key={drink.title}>
+              <br />
+              Title: {drink.title}
+              <br />
+              Description: {drink.description}
+              <br />
+              Ingredients: {drink.ingredients}
+            </div>
+          ))}
         </div>
-        
-      </div>
-      {/* display question container */}
-      <div className="display">
-        <h3>Description</h3>
-        {coldDrink.map(drink => <div key={drink.description}>
-         {drink.description}
-       </div>)}   
-      </div>
-      {/* display points container */}
-      <div className="display">
-        <h3>Ingredients</h3>
-        {coldDrink.map(drink => <div key={drink.ingredients}>
-         {drink.ingredients}
-       </div>)}   
+          
       </div>
     </div>
   );
