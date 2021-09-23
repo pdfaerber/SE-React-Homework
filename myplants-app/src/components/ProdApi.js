@@ -6,7 +6,7 @@ function ProdApi() {
     const [prodData, setInfo] = useState([]);
 
   function getProdApi() {
-    fetch("/api/v1/products/name")
+    fetch("https://api.sampleapis.com/coffee/iced")
       .then((data) => data.json())
       .then((response) => {
         setInfo(response)
@@ -21,7 +21,7 @@ function ProdApi() {
         Check out our Product Menu
       </button>
 
-      {/* display Hot Drink list container */}
+      display Hot Drink list container
       <div className="display__prodData-list">
         <h3>Title</h3>
         <div>
