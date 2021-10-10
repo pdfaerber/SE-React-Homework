@@ -28,48 +28,45 @@ import "./App.css";
 
 function App() {
   //initialize the state in functional component
-  const data = "";
-  const [info, setInfo] = useState(data);
+  const [trivia, setInfo] = useState([]);
+  
 
   function triviaFetch() {
     fetch("http://jservice.io/api/random")
       .then((data) => data.json())
       .then((response) => {
-        let question = response.map((element) => element.question);
-        let answer = response.map((element) => element.answer);
-        let points = response.map((element) => element.value);
-
-        console.log("success", answer);
-        console.log("Success:", question);
-        console.log("Success", points);
+        setInfo(response)
+        console.log("Success", response);
       });
-  } //end triviaFetch
+  } //end
 
-  if (data) {
-    console.log(data);
-  }
+
+  
 
   return (
     <div className="App">
       <button id="randomButton" onClick={() => triviaFetch()}>
-        Random Trivia Answer
+        Random Trivia
       </button>
 
-      {/* display answer container */}
-      <div className="display">
-        <h3>Answer:</h3>
-        {data && <div> answer: {info.answer}</div>}
-      </div>
-      {/* display question container */}
-      <div className="display">
-        <h3>Question:</h3>
-        {data && <div> question: {this.question}</div>}
-      </div>
-      {/* display points container */}
-      <div className="display">
-        <h3>Points:</h3>
-        {info && <div> points: {this.value}</div>}
-      </div>
+      <div className="display__trivia-list">
+        <h3>Trivia Answer, Question, Air Date</h3>
+        <div>
+        {trivia.map((trivia) => (
+            <div key={trivia.id}>
+              <br />
+              Answer: {trivia.answer}
+              <br />
+              Question: {trivia.question}
+              <br />
+              Air Date: {trivia.airdate}
+              <br/>
+              Points: {trivia.value}
+              <br />
+            </div>
+          ))}
+        </div>
+    </div>
     </div>
   );
 }
